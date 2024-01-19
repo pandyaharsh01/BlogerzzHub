@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+
+        <!------Page Header------>
+
+
+
+        <header class="masthead" style="background-image: url('{{ url_for('static',filename='assets/img/1-bg.png')}}');">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Blogerzz..</h1>
+                            <span class="subheading">A Directory Of Wonderful Things</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+
+
+        <!------Main Content------>
+
+
+
+
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+
+
+
+<!-------------------------------------------------------------Post 1------------------------------------------------------------->
+                        
+
+                        <!--Todo: Fetch it using for loop from the database-->
+                    {% for post in post %}
+                    
+                        <div class="post-preview">
+                            <a href="/post/{{ post.slug }}" >
+                               <h2 class="post-title"><li>{{ post.title }}</li></h2>
+
+                                <h3 class="post-subtitle">subtitle here</h3>
+                            </a>
+                                <p class="post-meta">Posted by
+                                    <a href="#">Admin</a>
+                                on {{post.date}}<br></p>
+                            {{post.content[0:55]}}...
+                        </div>
+
+                    {% endfor %} 
+
+
+<!------------------------------------------------------------/Post 1------------------------------------------------------------->
+
+
+   
+                    <!------Divider------>
+
+
+
+
+
+                    <!----------------------------------------------Pager-------------------------------------------------------->
+                    
+
+                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#">Older Posts →</a></div>
+
+            </div>
+        </div>
+        <hr class="my-4" />
+
+
+{% endblock %}

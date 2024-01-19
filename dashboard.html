@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+
+        <!------Page Header------>
+
+
+
+        <header class="masthead" style="background-image: url('{{ url_for('static',filename='assets/img/admin.jpg')}}');">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="page-heading">
+                            <h1>Admin panel</h1>
+                            <span class="subheading">manage your posts and change them </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+ 
+
+
+
+        <!------Main Content------>
+
+
+
+
+         <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+
+
+
+<!-------------------------------------------------------------Post 1------------------------------------------------------------->
+                        
+<!-- 
+                    {% for post in post %}
+                    
+                        <div class="post-preview">
+                            <a href="/post/{{ post.slug }}" >
+                               <h2 class="post-title"><li>{{ post.title }}</li></h2>
+
+                                <h3 class="post-subtitle">subtitle here</h3>
+                            </a>
+                                <p class="post-meta">Posted by
+                                    <a href="#">Admin</a>
+                                on {{post.date}}<br></p>
+                            {{post.content[0:55]}}...
+                        </div>
+
+                    {% endfor %} 
+
+ -->
+<!------------------------------------------------------------/Post 1------------------------------------------------------------->
+
+
+   
+                    <!------Divider------>
+
+
+
+
+
+                    <!----------------------------------------------Pager-------------------------------------------------------->
+                    
+
+                    <!-- <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#">Older Posts →</a></div>
+                </div>
+            </div>
+        </div>
+        <hr class="my-4" />
+ -->
+
+<div>
+    
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Srno</th>
+      <th scope="col">Title</th>
+      <th scope="col">Date</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+{% for post in post %}
+
+
+    <tr>
+      <th scope="row">{{post.srno}}</th>
+      <td>{{post.title}}</td>
+      <td>{{post.date}}</td>
+      <td><button class="btn btn-primary">Edit</button></td>
+      <td><button class="btn btn-primary">Delete</button></td>
+
+    </tr>
+
+
+{% endfor %} 
+
+  </tbody>
+</table>
+
+</div>
+
+{% endblock %}
+
