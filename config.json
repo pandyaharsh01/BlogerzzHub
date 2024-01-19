@@ -1,0 +1,18 @@
+{
+
+	"para":
+	{
+		"local_server" : "True",
+		"local_uri" : "mysql://root:@localhost:3307/blogerzz",
+		"prod_uri" : "mysql://root:@localhost:3307/blogerzz",
+		"fb_url" : "https://www.facebook.com/profile.php?id=61553655121904",
+		"tw_url" : "https://twitter.com/home?lang=en",
+		"git_url" : "https://github.com/pandyaharsh01",
+		"about_text":"Hello, I'm Harsh, a dedicated student at Parul University. My passion lies in the world of programming, where I find joy in solving complex problems and bringing ideas to life through code. I've even built my own website, a testament to my hands-on experience and commitment to applying what I learn. Whether it's exploring new technologies, participating in coding challenges, or collaborating on innovative projects, I thrive on the dynamic nature of the programming realm. My time at Parul University has not only enriched my academic journey but has also provided a platform to hone my skills and connect with like-minded individuals. I believe in the power of continuous learning, and I'm constantly seeking new opportunities to expand my knowledge and skill set. The journey of programming is both fascinating and endless, and I'm excited about the possibilities it holds.",
+		"no_of_post":5,
+		"admin_user":"Blogerzz",
+		"admin_pass":"Blogerzz@1234"
+	}
+
+}
+ 
